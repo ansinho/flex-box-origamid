@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Align Items</title>
+
+        <style>
+            body {
+                background: #292A2B;
+            }
+
+            h1 {
+            color: #fff;
+                text-align: center;
+                margin: 20px 0 0 0;
+                font-size: 1.25em;
+                font-weight: normal;
+            }
+
+            .container {
+                max-width: 420px;
+                margin: 0 auto;
+                display: flex;
+                border: 1px solid #ccc;
+            }
+
+            .item {
+                flex: 1;
+                margin: 5px;
+                padding: 0 10px;
+                background: #5B6A86;
+                color: #fff;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+
+            .stretch {
+                align-items: stretch;
+            }
+
+            .flex-start {
+               align-items: flex-start;
+            }
+
+            .flex-end {
+                align-items: flex-end;
+            }
+            .center {
+                align-items: center;
+            }
+
+            .baseline {
+                align-items: baseline;
+            }
+
+            .column {
+                flex-direction: column;
+            }
+
+            .alinhamento-central {
+                height: 400px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .alinhamento-central .item{
+                flex: 0;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        
+    <h1>Align-items: flex stretch;</h1>
+    <section class="container flex-stretch">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do Item</div>
+        <div class="item">Teste 3 do Item Agora Mesmo</div>
+        <div class="item">Teste 4</div>
+    </section>
+
+    <h1>Align-items: flex-start;</h1>
+        <section class="container flex-start">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do Item</div>
+        <div class="item">Teste 3 do Item Agora Mesmo</div>
+        <div class="item">Teste 4</div>
+    </section>
+
+    <h1>Align-item: flex-end;</h1>
+    <section class="container flex-end">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do Item</div>
+        <div class="item">Teste 3 do item Agora Mesmo</div>
+        <div class="item">Teste 4</div>
+    </section>
+
+    <h1>Align-item: center;</h1>
+    <section class="container center">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do Item</div>
+        <div class="item">Teste 3 do item Agora Mesmo</div>
+        <div class="item">Teste 4</div>
+    </section>
+    
+    <h1>Align-item: baseline;</h1>
+    <section class="container baseline">
+        <div class="item" style="padding: 10px;">1</div>
+        <div class="item">Teste 2 do Item</div>
+        <div class="item">Teste 3 do item Agora Mesmo</div>
+        <div class="item">Teste 4</div>
+    </section>
+
+
+
+    <h1>Aling-items: flex-start // column;</h1>
+    <section class="container flex-start column">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do Item</div>
+        <div class="item">Teste 3 do Item Agora Mesmo</div>
+        <div class="item">Teste 4</div>
+    </section>
+
+    <h1>Aling-items: flex-end // column;</h1>
+    <section class="container flex-end column">
+        <div class="item">1</div>
+        <div class="item">Teste 2</div>
+        <div class="item">Teste 3 do Item Agora Mesmo</div>
+        <div class="item">Teste 4</div>
+    </section>
+
+    <h1>Aling-items: center // column;</h1>
+    <section class="container center column">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do Item</div>
+        <div class="item">Teste 3 do Item Agora Mesmo</div>
+        <div class="item">Teste 4</div>
+    </section>
+
+    <h1>Aling-items: baseline // column;</h1>
+    <section class="container baseline column">
+        <div class="item" style="padding: 10px;">1</div>
+        <div class="item">Teste 2 do Item</div>
+        <div class="item">Teste 3 do Item Agora Mesmo</div>
+        <div class="item">Teste 4</div>
+    </section>
+
+    <h1>Aling-items: Alinhamento-central // column;</h1>
+    <section class="container alinhamento-central">
+        <div class="item">Esse item está verticalmente alinhado ao centro.</div>
+    </section>
+
+    </body>
+</html>

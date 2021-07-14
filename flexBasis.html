@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-basis</title>
+
+    <style>
+        body {
+            background: #292A2B;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin: 20px 0 0 0;
+            font-size: 1.25em;
+            font-weight: normal;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            border: 1px solid #ccc;
+        }
+
+        .item {
+            margin: 5px;
+            background: #5B6A86;
+            text-align: center;
+            font-size: 1.5em;
+            color: #fff;
+        }
+
+        .basis-numero-container {
+            flex-wrap: wrap;
+        }
+
+        .basis-auto {
+            flex-grow: 1;
+            flex-basis: auto;
+        }
+
+        .basis-auto-grow-2 {
+            flex-grow: 2;
+            flex-basis: auto;
+        }
+
+        .basis-auto-width {
+            flex-grow: 1;
+            flex-basis: auto;
+            width: 60px;
+        }
+
+        .basis-auto-grow-0 {
+            flex-basis: auto;
+        }
+
+        .basis-0 {
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+
+        .basis-0-grow-2 {
+            flex-grow: 2;
+            flex-basis: 0;
+        }
+
+        .basis-0-width {
+            flex-grow: 1;
+            flex-basis: 0;
+            width: 120px;
+            min-width: 80px;
+        }
+
+        .basis-0-grow-0 {
+            flex-basis: 0;
+        }
+
+        .basis-110 {
+            flex-basis: 110px;
+        }
+
+        .basis-300 {
+            flex-basis: 300px;
+        }
+
+        .basis-110-porcento {
+            flex-basis: calc(25% - 10px);
+        }
+
+        .basis-110-grow-1 {
+            flex-grow: 1;
+            flex-basis: 110px;
+        }
+
+        .basis-600-grow-1 {
+            flex-grow: 1;
+            flex-basis: 600px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>flex-basis: auto;</h1>
+    <section class="container">
+        <div class="item basis-auto">Palavra 1</div>
+        <div class="item basis-auto">2</div>
+        <div class="item basis-auto-grow-2">3</div>
+        <div class="item basis-auto">4</div>
+        <div class="item basis-auto">5</div>
+    </section>
+
+    <h1>flex-basis: 0;</h1>
+    <section class="container">
+        <div class="item basis-0">Test de Cont</div>
+        <div class="item basis-0">2</div>
+        <div class="item basis-0-grow-2">Palavra</div>
+        <div class="item basis-0-width">4</div>
+        <div class="item basis-0-grow-0">5</div>
+    </section>
+
+    <h1>flex-basis: número;</h1>
+    <section class="container basis-numero-container">
+        <div class="item basis-110">1</div>
+        <div class="item basis-110">12</div>
+        <div class="item basis-110">12345678910</div>
+        <div class="item basis-300">1234</div>
+        <div class="item basis-110-porcento">1</div>
+        <div class="item basis-110-porcento">12</div>
+        <div class="item basis-110-porcento">123</div>
+        <div class="item basis-110-porcento">1234</div>
+    </section>
+
+    <h1>flex-basis: número; // Diferente Conteúdo</h1>
+    <section class="container basis-numero-container">
+        <div class="item basis-110">Conteúdo Grande</div>
+        <div class="item basis-110">PalavraMaior</div>
+        <div class="item basis-110">Oi</div>
+    </section>
+
+    <h1>flex-basis: número; // grow 1</h1>
+    <section class="container basis-numero-container">
+        <div class="item basis-110-grow-1">1</div>
+        <div class="item basis-110-grow-1">12</div>
+        <div class="item basis-110-grow-1">1234</div>
+        <div class="item basis-110-grow-1">12345</div>
+        <div class="item basis-600-grow-1">5</div>
+    </section>
+
+</body>
+
+</html>
